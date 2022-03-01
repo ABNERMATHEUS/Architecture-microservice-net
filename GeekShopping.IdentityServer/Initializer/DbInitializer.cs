@@ -32,11 +32,11 @@ namespace GeekShopping.IdentityServer.Initializer
 
             ApplicationUser admin = new ApplicationUser()
             {
-                UserName = "leandro-admin",
-                Email = "leandro-admin@erudio.com.br",
+                UserName = "abner-admin",
+                Email = "abnerm80@gmail.com",
                 EmailConfirmed = true,
                 PhoneNumber = "+55 (34) 12345-6789",
-                FirstName = "Leandro",
+                FirstName = "Abner",
                 LastName = "Admin"
             };
 
@@ -53,15 +53,15 @@ namespace GeekShopping.IdentityServer.Initializer
 
             ApplicationUser client = new ApplicationUser()
             {
-                UserName = "leandro-client",
-                Email = "leandro-client@erudio.com.br",
+                UserName = "abner-client",
+                Email = "abner-client@gmail.com",
                 EmailConfirmed = true,
                 PhoneNumber = "+55 (34) 12345-6789",
-                FirstName = "Leandro",
+                FirstName = "Abner",
                 LastName = "Client"
             };
 
-            _user.CreateAsync(client, "Erudio123$").GetAwaiter().GetResult();
+            _user.CreateAsync(client, "Abner123$").GetAwaiter().GetResult();
             _user.AddToRoleAsync(client,
                 IdentityConfiguration.Client).GetAwaiter().GetResult();
             var clientClaims = _user.AddClaimsAsync(client, new Claim[]
