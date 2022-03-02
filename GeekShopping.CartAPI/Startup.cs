@@ -17,6 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GeekShopping.CartAPI.RabbitMQSender;
 
 namespace GeekShopping.CartAPI
 {
@@ -44,6 +45,7 @@ namespace GeekShopping.CartAPI
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<ICartRepository, CartRepository>();
+            services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 
             services.AddControllers();
 

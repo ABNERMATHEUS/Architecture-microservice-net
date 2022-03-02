@@ -79,7 +79,7 @@ namespace GeekShopping.Web.Services
             var response = await _client.PostAsJson($"{BasePath}/checkout", model);
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<CartHeaderViewModel>();
-            else throw new Exception("Something went wrong when calling API");
+            else throw new Exception($"Something went wrong when calling API {token}");
         }
 
         public async Task<bool> ClearCart(string userId, string token)
