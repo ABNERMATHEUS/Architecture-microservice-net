@@ -1,7 +1,10 @@
-namespace GeekShopping.MessageBus;
+﻿using System;
 
-public class BaseMessage
+namespace GeekShopping.MessageBus
 {
-    public long Id { get; set; }
-    public DateTime MessageCreated { get; set; }
+    public class BaseMessage
+    {
+        public long Id { get; set; }
+        public DateTime MessageCreated { get; set; }
+    }
 }

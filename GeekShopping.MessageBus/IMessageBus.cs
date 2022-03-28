@@ -1,6 +1,9 @@
-﻿namespace GeekShopping.MessageBus;
+﻿using System.Threading.Tasks;
 
-public interface IMessageBus
+namespace GeekShopping.MessageBus
 {
-    Task PublicMessage(BaseMessage message, string queueName);
+    public interface IMessageBus
+    {
+        Task PublicMessage(BaseMessage message, string queueName);
+    }
 }

@@ -2,7 +2,9 @@
 // See LICENSE in the project root for license information.
 
 
-namespace IdentityServerHost.Quickstart.UI
+using GeekShopping.IdentityServer.MainModule.Consent;
+
+namespace GeekShopping.IdentityServer.MainModule.Device
 {
     public class DeviceAuthorizationViewModel : ConsentViewModel
     {
